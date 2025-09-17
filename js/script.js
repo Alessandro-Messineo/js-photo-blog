@@ -9,3 +9,32 @@
 
 // Milestone 3
 // Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
+
+// output
+const printCard = document.getElementById("row");
+
+// chiamata ajax
+axios.get("https://lanciweb.github.io/demo/api/pictures/")
+    .then(cards => {
+        const arrayCard = cards.data;
+        // variabile di accumulo
+        let cardString = "";
+        // ciclo array
+        arrayCard.forEach(card => {
+            // inserisce elementi nella variabile
+            cardString += `<div class="card">
+                    <div class="container-img">
+                        <img src="img/pin.svg" alt="pin" class="pin">
+                        <img src="${card.url}" alt="${card.id}">
+                    </div>
+                    <p class="data">${card.date}</p>
+                    <h3 class="titolo">${card.title}</h3>
+                </div>`
+
+        })
+        // stampa a schermo tutte le card
+        printCard.innerHTML = cardString;
+    })
+    .catch(error => {
+        console.error(error)
+    })
