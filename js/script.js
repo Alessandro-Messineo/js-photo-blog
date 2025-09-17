@@ -25,7 +25,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             cardString += `<div class="card">
                     <div class="container-img">
                         <img src="img/pin.svg" alt="pin" class="pin">
-                        <img src="${card.url}" alt="${card.id}">
+                        <img src="${card.url}" alt="${card.id}" class="img-main">
                     </div>
                     <p class="data">${card.date}</p>
                     <h3 class="titolo">${card.title}</h3>
