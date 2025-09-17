@@ -1,0 +1,12 @@
+/* Stile generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font per titolo
+font-family: Edu Tas Beginner, sans-serif ; */
+
+/* font per data
+font-family: "Sometype Mono", monospace; */
