@@ -5,8 +5,58 @@
     box-sizing: border-box;
 }
 
-/* font per titolo
-font-family: Edu Tas Beginner, sans-serif ; */
+/* Stile header */
+header {
+    height: 120px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/wall.png");
+}
 
-/* font per data
-font-family: "Sometype Mono", monospace; */
+h1 {
+    font-family: "Edu Tas Beginner", sans-serif;
+    font-size: 70px;
+}
+
+/* Stile main */
+main {
+    background-image: url("../img/cork.png");
+    padding: 40px 0 40px 0;
+}
+
+.container {
+    background-color: rebeccapurple;
+    width: 80%;
+    margin: 0 auto;
+
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    width: calc(33% - 4px);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.data {
+    font-family: "Sometype Mono", monospace;
+}
+
+.titolo {
+    font-family: Edu Tas Beginner, sans-serif;
+}
