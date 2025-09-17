@@ -16,14 +16,15 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
-h1{
+
+h1 {
     font-family: "Edu Tas Beginner", sans-serif;
     font-size: 70px;
 }
 
 /* Stile main */
-main{
-    background-image: url("../img/cork.png"); 
+main {
+    background-image: url("../img/cork.png");
     background-repeat: repeat;
     background-size: cover;
     min-height: 100vh;
@@ -48,6 +49,8 @@ main{
     width: calc(33% - 15px);
     position: relative;
     margin-top: 40px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .pin {
@@ -75,19 +78,31 @@ main{
     text-transform: uppercase;
 }
 
+.card:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 1);
+    z-index: 99;
+    cursor: pointer;
+}
+.card:hover .pin{
+    display: none;
+}
+
+/* versione per tablet */
 @media screen and (max-width: 1000px) {
     .card {
-    width: calc(50% - 15px);
+        width: calc(50% - 15px);
+    }
 }
-}
 
 
-
+/* versione per smartphon */
 @media screen and (max-width: 600px) {
     .card {
-    width: calc(100%);
-}
-h1 {
+        width: calc(100%);
+    }
+
+    h1 {
         font-size: 50px;
     }
 }
