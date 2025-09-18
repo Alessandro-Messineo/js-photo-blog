@@ -17,6 +17,7 @@
 // selezione degli elementi di pagina
 const printCard = document.getElementById("row");
 const overlayOn = document.getElementById("overlay-id");
+const overlayImg = document.getElementById("img-overlay-id");
 const btn = document.getElementById("btn-overlay-id")
 
 // chiamata ajax
@@ -46,11 +47,19 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
         cardItems.forEach(cardItem => {
             // evento che al click della card compare l'overlay
             cardItem.addEventListener("click", () => {
+                // cambia il display all'overlay
                 overlayOn.style.display = "block";
+                // prede url dell'immagine cliccata
+                const imgSrc = cardItem.querySelector(".img-main").src;
+                // cre un elemento img e lo inserisce in pagina
+                overlayImg.innerHTML = `
+                    <img src="${imgSrc}" class="img-overlay-class">
+                `;
+
             });
         });
 
-        // evento che al click del pulsante scopare l'overlay
+        // evento che al click del pulsante scompare l'overlay
         btn.addEventListener("click", () => {
             overlayOn.style.display = "none";
         })
